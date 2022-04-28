@@ -1,0 +1,96 @@
+.slider{
+    margin-top: 70px;
+    padding-top: 50%;
+    background: url('../access/team.jpg') top center / cover no-repeat;
+    position: relative;
+}
+
+.text{
+    position: fixed; 
+    bottom: 30px;
+    color: #fff;
+    left: 50%;  
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.text-heading{
+    font-weight: 500;   
+    font-size: 24px;
+    margin-bottom:25px;
+}
+
+.text-slogan{
+    font-size: 16px;
+}
+
+.logo{
+    position: absolute;
+    transform: translateY(80%);
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    
+}
+
+.content {
+    background-color: rgb(76, 143, 125);
+    height: 1400px; 
+    padding-bottom: 1000px;
+    
+}
+
+.content .container {
+    background-color: #fff;
+    margin: 0 100px;
+    padding: 110px 28px 16px;
+    border-top: 5px solid rgb(191, 201, 115);
+    
+    
+}
+
+.content p {
+    line-height: 1.4;
+    text-align: justify;
+    
+}
+
+.intro h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.achievement h1 {
+    padding-top: 90px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.achievement img{
+    width: 100%;
+}
+
+.achievement {
+    text-align: center;
+}
+
+.picture img {
+    width: 100%;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+
+}
+
+.footer {
+    padding: 50px 90px 0px;
+
+}
+
+.footer .icon {
+
+}

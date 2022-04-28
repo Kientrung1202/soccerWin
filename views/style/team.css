@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    margin-top: 70px;
+    background-color:  #442d72;
+    height: 1000px;
+    margin-bottom: 100px;
+}
+
+.container {
+    padding-top: 90px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height :425px;
+    border: 1px solid #5e419a;
+    background-image: url(../img/bg-cauthu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 5px;
+}
+
+
+
+.first-info {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.number-player img {
+    height: 55px;
+}
+
+.name-position .name-player { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400 !important;
+    font-size: 28px;
+    color: #ffca05;
+    padding-bottom: 2px;
+}
+
+.position-player {
+    padding-top: 2px;
+    padding-left: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+}
+
+.name-position {
+    padding-left: 10px;
+}
+
+.picture-player {
+    height: 330px;
+    width: auto;
+    margin-top: 24px;
+}
+
+.cap {
+    width: 40px;
+    height: 24.35px;
+    margin-left: 40px;
+    margin-top: -10px;
+}
