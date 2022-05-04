@@ -9,6 +9,11 @@ app.use(express.static(path.join(__dirname, '/views')));
 app.get('/', function (req, res) {
     res.render('pages/index');
 });
-
+app.get('/schedule', (req, res) => {
+    res.render('pages/schedule')
+})
+app.get('/team', (req, res) => {
+    res.render('pages/team')
+})
 app.listen(8080);
 console.log('Server is listening on port 8080');
