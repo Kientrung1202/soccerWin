@@ -3,14 +3,14 @@
     margin: 0;
 }
 
-.content {
+.team-content {
     margin-top: 70px;
     background-color:  #442d72;
     height: 1000px;
     margin-bottom: 100px;
 }
 
-.container {
+.team-container {
     padding-top: 90px;
     width: 100%;
 }
@@ -20,7 +20,7 @@
     justify-content: center;
 }
 
-.col {
+.box-player {
     display: flex;
     flex-direction: column;
     width: 350px;
