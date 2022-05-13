@@ -14,23 +14,27 @@
         
                     <div class="next">
                         <h1 class="title">TRẬN KẾ TIẾP</h1>
-                        <h2 class="fight">97plus - SKR</h2>
+                        <h2 class="fight">97plus - <%= nextMatch[0].competitionName %> </h2>
                         <div class="giaohuu">
                             <img src="../access/giaohuu.png" alt="">
+                            <% if (!nextMatch[0].IDseason) { %>
                             <p>Giao hữu</p>
+                            <% } else { %>
+                                <p><%= nextMatch[0].nameSeason %></p>
+                                <% } %>
                         </div>
         
                         <div class="time-place">
         
                             <div class="time">
                                 <img src="../access/i1.png" alt="">
-                                <p>1AM-3AM</p>
-                                <p>30/4</p>
+                                <p><%= nextMatch[0].start %>h-<%= nextMatch[0].end %>h</p>
+                                <p><%= nextMatch[0].day %>-<%= nextMatch[0].month %>-<%= nextMatch[0].year %></p>
                             </div>
         
                             <div class="place">
                                 <img src="../access/i2.png" alt="">
-                                <p>Thành Phát</p>
+                                <p><%= nextMatch[0].fieldName %></p>
                             </div>
         
                         </div>
@@ -41,134 +45,61 @@
                         <h1 class="title">KẾT QUẢ</h1>
                         <div class="detail">
         
-                            <div class="row-result">
-                                <img src="../access/cuppng.png" class="prize" alt="">
-                                <div class="information">
-                                    <p>CÚP CBK league</p>
-                                    <p style="font-weight: 600; font-size: 12pt;">12/4/2022 - 17:00</p>
-                                    <p>SVĐ Bắc Kạn</p>
+                            <% lastMatch.forEach(match => { %>
+                                <div class="row-result">
+                                    <img src="../access/cuppng.png" class="prize" alt="">
+                                    <div class="information">
+                                        <p><%= match.nameSeason %> </p>
+                                        <p style="font-weight: 600; font-size: 12pt;">12/4/2022 - 17:00</p>
+                                        <p><%= match.fieldName %></p>
+                                    </div>
+                                    <div class="score">
+                                        <p class="team-football">97plus</p>
+                                        <p class="score-match"><%= match.Result %></p>
+                                        <p class="team-football"><%= match.competitionName %></p>
+                                    </div>
                                 </div>
-                                <div class="score">
-                                    <p class="team-football">97plus</p>
-                                    <p class="score-match">2:1</p>
-                                    <p class="team-football">12T</p>
-                                </div>
-                            </div>
-        
-                            <div class="row-result">
-                                <img src="../access/cuppng.png" class="prize" alt="">
-                                <div class="information">
-                                    <p>CÚP CBK league</p>
-                                    <p style="font-weight: 600; font-size: 12pt;">12/4/2022 - 17:00</p>
-                                    <p>SVĐ Bắc Kạn</p>
-                                </div>
-                                <div class="score">
-                                    <p class="team-football">97plus</p>
-                                    <p class="score-match">2:1</p>
-                                    <p class="team-football">12T</p>
-                                </div>
-                            </div>
-        
-                            <div class="row-result" style="border: none;">
-                                <img src="../access/cuppng.png" class="prize" alt="">
-                                <div class="information">
-                                    <p>CÚP CBK league</p>
-                                    <p style="font-weight: 600; font-size: 12pt;">12/4/2022 - 17:00</p>
-                                    <p>SVĐ Bắc Kạn</p>
-                                </div>
-                                <div class="score">
-                                    <p class="team-football">97plus</p>
-                                    <p class="score-match">2:1</p>
-                                    <p class="team-football">12T</p>
-                                </div>
+                            <% }) %>
                             </div>
         
                         </div>
                         
                     </div>
-        
                 </div>
-        
                 <div class="row2">  
                     <div class="schedule">
                         <h1 class="title">LỊCH TRỐNG</h1>
                         <div class="training-schedule">
-                            
-                            <div class="practice">
-                                <img src="../access/tapluyen.png" alt="">
-                                
-                                    <div class="information">
-                                        <p style="color: brown; font-weight: 600;">Tập luyện</p>
-                                        <p style="font-weight: 600; font-size: 12pt;">24/4/2022 - 17:00</p>
-                                        <p>SVĐ Bắc Kạn</p>
-                                    </div>
-                                    <div class="ex">
-                                        <p>KHỞI ĐỘNG:  Các bài tập cơ bản, chạy 3 vòng quanh sân, tập cảm giác bóng.</p>
-                                        <p>CHIẾN THUẬT:  Học hiểu chiến thuật của HLV đưa ra để áp dụng vào trận đấu.</p>
-                                        <p>THỰC CHIẾN:  Đá đối kháng 7v7 với chiến thuật đề ra.</p>
-                                    </div>
-                            </div>
-        
-                            <div class="practice">
-                                <img src="../access/tapluyen.png" alt="">
-                                
-                                    <div class="information">
-                                        <p style="color: brown; font-weight: 600;">Tập luyện</p>
-                                        <p style="font-weight: 600; font-size: 12pt;">24/4/2022 - 17:00</p>
-                                        <p>SVĐ Bắc Kạn</p>
-                                    </div>
-                                    <div class="ex">    
-                                        <p>KHỞI ĐỘNG:  Các bài tập cơ bản, chạy 3 vòng quanh sân, tập cảm giác bóng.</p>
-                                        <p>CHIẾN THUẬT:  Học hiểu chiến thuật của HLV đưa ra để áp dụng vào trận đấu.</p>
-                                        <p>THỰC CHIẾN:  Đá đối kháng 7v7 với chiến thuật đề ra.</p>
-                                    </div>
-                            </div>
-        
+                            <% trainMatch.forEach(match => { %>
+                                <div class="practice">
+                                    <img src="../access/tapluyen.png" alt="">
+                                    
+                                        <div class="information">
+                                            <p style="color: brown; font-weight: 600;">Tập luyện</p>
+                                            <p style="font-weight: 600; font-size: 12pt;"><%= match.day %>/<%= match.month %>/<%= match.year %> - <%= match.hour %>:00</p>
+                                            <p><%= match.fieldName %></p>
+                                        </div>
+                                        <div class="ex">
+                                            <% match.context.split(".").forEach(element => { %>
+                                                <p><%= element %>.</p>
+                                            <% }) %>
+                                        </div>
+                                </div>
+                            <% }) %>
                             <div class="book">
-                                <div class="book-col">
-        
-                                    <div class="box">
-                                        <img src="../access/Datlich.jpg" alt="">
-        
-                                        <div class="book-time">
-                                            <p>25/4/2022</p>
-                                            <p>CHỦ NHẬT</p>
-                                        </div>
-                                        <button class="button-js"  >HẸN</button .button-js   >
-                                    </div>  
-                                    <div class="box">
-                                        <img src="../access/Datlich.jpg" alt="">
-                                        <div class="book-time">
-                                            <p>25/4/2022</p>
-                                            <p>CHỦ NHẬT</p>
-                                        </div>
-                                        <button class="button-js"  >HẸN </button>
-                                    </div>    
-                                    
-                                </div>
-        
-                                <div class="book-col">
-        
-                                    <div class="box">
-                                        <img src="../access/Datlich.jpg" alt="">
-                                        <div class="book-time">
-                                            <p>25/4/2022</p>
-                                            <p>CHỦ NHẬT</p>
+                                    <% emptyMatch.forEach(match => { %>
+                                        <div class="book-col">
+                                        <div class="box">
+                                            <img src="../access/Datlich.jpg" alt="">
+
+                                            <div class="book-time">
+                                                <p><%= match.day %>/<%= match.month %>/<%= match.year %> </p>
+                                                <p><%= match.dayname %></p>
+                                            </div>
+                                            <button class="button-js">HẸN</button .button-js   >
                                         </div>  
-                                        <button class="button-js" >HẸN</button>
-                                    </div>  
-                                    <div class="box">
-                                        <img src="../access/Datlich.jpg" alt="">
-                                        <div class="book-time">
-                                            <p>25/4/2022</p>
-                                            <p>CHỦ NHẬT</p>
-                                        </div>
-                                        <button class="button-js" >HẸN</button>
-                                    </div>    
-                                    
-                                </div>
-        
-        
+                                    </div>
+                                    <% }) %>
                             </div>
         
                         </div>
@@ -178,7 +109,6 @@
             </div>
             
         </div>
-        
         
         <div class="modal js-modal">
             <div class="modal-container">
