@@ -1,6 +1,8 @@
 const express = require('express');
 var app = express();
 const path = require('path');
+const { team, schedule } = require('./controller/pageIndex');
+const db = require("./db")
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/views')));
@@ -9,11 +11,7 @@ app.use(express.static(path.join(__dirname, '/views')));
 app.get('/', function (req, res) {
     res.render('pages/index');
 });
-app.get('/schedule', (req, res) => {
-    res.render('pages/schedule')
-})
-app.get('/team', (req, res) => {
-    res.render('pages/team')
-})
+app.get('/schedule', schedule)
+app.get('/team', team);
 app.listen(8080);
 console.log('Server is listening on port 8080');
