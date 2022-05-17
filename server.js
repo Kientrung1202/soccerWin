@@ -15,5 +15,8 @@ app.get('/schedule', (req, res) => {
 app.get('/team', (req, res) => {
     res.render('pages/team')
 })
+app.get('/login', (req, res) => {
+    res.render('pages/login')
+})
 app.listen(8080);
 console.log('Server is listening on port 8080');
